@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Thanga Pandian | Content Writer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0708;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.top-nav{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+}
+
+.nav-wrapper{
+  background:#161112;
+  padding:14px 24px;
+  border-radius:18px;
+  display:flex;
+  gap:26px;
+  align-items:center;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.nav-wrapper a{
+  color:white;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.nav-wrapper a:hover{
+  color:#ff6a13;
+  transform:translateY(-3px);
+}
+
+/* MAIN */
+
+.main{
+  width:100%;
+  min-height:100vh;
+  padding:100px 70px 60px;
+}
+
+.hero{
+  display:flex;
+  gap:80px;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+/* LEFT CARD */
+
+.left-card{
+  width:345px;
+  background:#ececec;
+  border-radius:22px;
+  padding:18px;
+  position:sticky;
+  top:100px;
+  min-height:640px;
+}
+
+.profile-image{
+  width:100%;
+  height:300px;
+  overflow:hidden;
+  border-radius:18px;
+  margin-bottom:20px;
+}
+
+.profile-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.left-card h2{
+  font-size:28px;
+  color:black;
+  font-weight:800;
+  margin-bottom:28px;
+  text-align:center;
+}
+
+.quote{
+  color:#707070;
+  font-size:16px;
+  line-height:1.3;
+  margin-top:70px;
+  margin-bottom:45px;
+  font-weight:700;
+  text-align:center;
+}
+
+.socials{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+}
+
+.socials a{
+  color:#ff6a13;
+  font-size:19px;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  transform:translateY(-4px);
+}
+
+/* RIGHT CONTENT */
+
+.right-content{
+  flex:1;
+  max-width:760px;
+}
+
+/* BIG HEADING */
+
+.big-heading{
+  line-height:0.85;
+  margin-bottom:28px;
+}
+
+.big-heading h1{
+  font-size:118px;
+  font-weight:900;
+  letter-spacing:-6px;
+  color:#ffffff;
+}
+
+.big-heading h2{
+  font-size:118px;
+  font-weight:900;
+  letter-spacing:-6px;
+  color:#2b2629;
+}
+
+/* INTRO */
+
+.intro{
+  max-width:620px;
+  color:#9f949b;
+  font-size:18px;
+  line-height:1.45;
+}
+
+.intro em{
+  font-style:italic;
+}
+
+.highlight{
+  color:#b7ff31;
+  font-weight:700;
+}
+
+/* STATS */
+
+.stats{
+  display:flex;
+  gap:55px;
+  margin-top:55px;
+  margin-bottom:75px;
+}
+
+.stat h3{
+  font-size:68px;
+  font-weight:800;
+  line-height:1;
+}
+
+.stat p{
+  color:#8f868c;
+  font-size:15px;
+  margin-top:10px;
+  text-transform:uppercase;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+  line-height:0.88;
+  margin-bottom:45px;
+}
+
+.section-title h1{
+  font-size:95px;
+  font-weight:900;
+  letter-spacing:-5px;
+}
+
+.section-title h2{
+  font-size:95px;
+  font-weight:900;
+  letter-spacing:-5px;
+  color:#2f292d;
+}
+
+/* PROJECTS */
+
+.project{
+  display:flex;
+  gap:22px;
+  background:#130f10;
+  padding:18px;
+  border-radius:20px;
+  margin-bottom:26px;
+  align-items:center;
+}
+
+.project img{
+  width:110px;
+  height:110px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.project-content{
+  flex:1;
+}
+
+.project-content h3{
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+.project-content p{
+  color:#9f979c;
+  line-height:1.5;
+  font-size:17px;
+}
+
+.project-arrow{
+  color:#ff6a13;
+  font-size:20px;
+}
+
+/* TOOLS */
+
+.tools{
+  margin-top:90px;
+}
+
+.tools-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+.tool{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.tool img{
+  width:52px;
+  height:52px;
+  border-radius:12px;
+}
+
+.tool h4{
+  font-size:22px;
+  margin-bottom:4px;
+}
+
+.tool p{
+  color:#8e868b;
+}
+
+/* BLOGS */
+
+.blogs{
+  margin-top:110px;
+}
+
+.blog-heading{
+  line-height:0.9;
+  margin-bottom:45px;
+}
+
+.blog-heading h1{
+  font-size:88px;
+  font-weight:900;
+  color:#ff6a13;
+  letter-spacing:-4px;
+}
+
+.blog-heading h2{
+  font-size:88px;
+  font-weight:900;
+  color:#b7f34b;
+  letter-spacing:-4px;
+}
+
+.blog-card{
+  background:#130f10;
+  padding:28px;
+  border-radius:22px;
+  margin-bottom:24px;
+}
+
+.blog-card h3{
+  font-size:25px;
+  line-height:1.2;
+  margin-bottom:18px;
+}
+
+.blog-card p{
+  color:#968d92;
+  line-height:1.5;
+  margin-bottom:20px;
+}
+
+.blog-card span{
+  color:#8b8287;
+}
+
+/* CONTACT */
+
+.contact{
+  margin-top:120px;
+}
+
+.contact-box{
+  background:#130f10;
+  padding:40px;
+  border-radius:22px;
+}
+
+.contact-details{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  color:#c9c0c5;
+  font-size:18px;
+}
+
+.contact-item i{
+  width:55px;
+  height:55px;
+  background:#ff641f;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:20px;
+}
+
+.contact-item a{
+  color:#c9c0c5;
+  text-decoration:none;
+}
+
+.contact-item a:hover{
+  color:#ff641f;
+}
+
+.contact-item strong{
+  color:white;
+  display:block;
+  margin-bottom:4px;
+}
+
+.invite-btn{
+  margin-top:45px;
+}
+
+.invite-btn a{
+  width:100%;
+  display:block;
+  text-align:center;
+  background:#ff641f;
+  padding:22px;
+  border-radius:14px;
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.invite-btn a:hover{
+  transform:translateY(-3px);
+  opacity:0.9;
+}
+
+/* FOOTER */
+
+.footer{
+  margin-top:90px;
+  color:#9b9297;
+}
+
+.footer span{
+  color:#ff6a13;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+  .hero{
+    flex-direction:column;
+  }
+
+  .left-card{
+    position:relative;
+    width:100%;
+    max-width:420px;
+    top:0;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .main{
+    padding:100px 20px 50px;
+  }
+
+  .big-heading h1,
+  .big-heading h2,
+  .section-title h1,
+  .section-title h2,
+  .blog-heading h1,
+  .blog-heading h2{
+    font-size:60px;
+  }
+
+  .stats{
+    flex-direction:column;
+    gap:28px;
+  }
+
+  .tools-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .project img{
+    width:100%;
+    height:220px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="top-nav">
+
+  <div class="nav-wrapper">
+
+    <a href="#home">
+      <i class="fa-solid fa-house"></i>
+    </a>
+
+    <a href="#projects">
+      <i class="fa-regular fa-folder"></i>
+    </a>
+
+    <a href="#tools">
+      <i class="fa-solid fa-wrench"></i>
+    </a>
+
+    <a href="#contact">
+      <i class="fa-regular fa-pen-to-square"></i>
+    </a>
+
+  </div>
+
+</nav>
+
+<div class="main">
+
+  <section class="hero" id="home">
+
+    <!-- LEFT CARD -->
+
+    <div class="left-card">
+
+      <div class="profile-image">
+
+      <p style="color:black; font-size:22px; font-weight:700; line-height:1.8;">
+
+• Content Marketing <br>
+• SEO Content Writing <br>
+• Copywriting <br>
+• Blog Writing <br>
+• Content Strategy <br>
+• B2B SaaS <br>
+• Technical Writing <br>
+
+</p>
+
+      </div>
+
+      <h2>Thangapandian</h2>
+      <h4 style="color: black;"> Strategic storyteller focused on crafting impactful, SEO-driven content that blends creativity with purpose. Skilled in creating compelling copy, engaging digital content, and audience-focused messaging that strengthens brand presence, drives engagement, and supports meaningful business growth across both B2B and B2C platforms.</h4>
+
+      <p class="quote">
+
+        "Words are cheap... unless I write them.
+        Then they are priceless"
+
+      </p>
+
+      <div class="socials">
+
+        <!-- YOUTUBE -->
+        <a href="https://youtube.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- TWITTER -->
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <!-- LINKEDIN -->
+        <a href="https://www.linkedin.com/in/thangapandian-s-1393aa286?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <!-- EMAIL -->
+        <a href="mailto:thangapandian218@gmail.com">
+          <i class="far fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+
+    <div class="right-content">
+
+      <!-- HERO -->
+
+      <div class="big-heading">
+
+        <h1>Content</h1>
+
+        <h2>Writer</h2>
+
+      </div>
+
+      <div class="intro">
+
+        <p>
+
+          Hi there! <br>
+
+          I'm your future <em>wordsmith-in-chief.</em>
+          If you're looking for someone who can turn dull
+          sentences into magnetic copy and blah into
+          <em>ta-da,</em> you've found your match.
+          My pen (okay, keyboard) doesn’t just write...
+          it creates, sells, persuades, and sometimes
+          even flirts.
+
+        </p>
+
+        <br>
+
+        <p>
+
+          I specialize in crafting content that doesn’t
+          just sit there, it stands up, waves, and shouts,
+
+          <span class="highlight">“Hire me!”</span>
+
+        </p>
+
+      </div>
+
+      <!-- STATS -->
+
+      <div class="stats">
+
+        <div class="stat">
+          <h3>+2</h3>
+          <p>Years Of Experience</p>
+        </div>
+
+        <div class="stat">
+          <h3>+12</h3>
+          <p>Projects Completed</p>
+        </div>
+
+        <div class="stat">
+          <h3>+20</h3>
+          <p>Worldwide Clients</p>
+        </div>
+
+      </div>
+
+      <!-- PROJECTS -->
+
+      <section id="projects">
+
+        <div class="section-title">
+
+          <h1>RECENT</h1>
+
+          <h2>PROJECTS</h2>
+
+       <a href="final-funnel.html" style="text-decoration:none; color:inherit; display:block;">
+
+  <div class="project">
+
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200">
+
+    <div class="project-content">
+      <h3>Zappos Family of Companies – The DEI of Supply Chain Management</h3>
+
+      <p>
+        Crafted an insight-driven leadership feature exploring demand, efficiency, and innovation in supply chain management, transforming complex operational strategies into engaging business storytelling for industry audiences.
+      </p>
+    </div>
+
+    <div class="project-arrow">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </div>
+
+  </div>
+
+<a href="talon.html" style="text-decoration:none; color:inherit; display:block;">
+
+<div class="project">
+
+  <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200">
+
+  <div class="project-content">
+
+    <h3>TALON – Learning & Development</h3>
+
+    <p>
+      Developed compelling editorial content based on executive insights, transforming complex learning and development strategies into engaging narratives that highlighted business impact, AI-driven learning, and workforce transformation.
+    </p>
+
+  </div>
+
+  <div class="project-arrow">
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  </div>
+
+</div>
+
+</a>
+
+      </section>
+
+      <!-- TOOLS -->
+
+      <section class="tools" id="tools">
+
+        <div class="section-title">
+
+          <h1>PREMIUM</h1>
+
+          <h2>TOOLS</h2>
+          
+
+        </div>
+
+        <div class="tools-grid">
+
+          <div class="tool">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png">
+
+            <div>
+              <h4>WordPress</h4>
+              <p>Click, drag, done, and boom, you're a web wizard!</p>
+            </div>
+
+          </div>
+
+          <div class="tool">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968890.png">
+
+            <div>
+              <h4>Notion</h4>
+              <p>Productivity Tool</p>
+            </div>
+
+          </div>
+
+          <div class="tool">
+
+            <img src="https://seeklogo.com/images/S/semrush-logo-949C0B4B25-seeklogo.com.png">
+
+            <div>
+              <h4>Semrush</h4>
+              <p>SEO</p>
+            </div>
+
+          </div>
+
+          <div class="tool">
+
+            <img src="https://cdn.worldvectorlogo.com/logos/ahrefs-1.svg">
+
+            <div>
+              <h4>Ahrefs</h4>
+              <p>SEO</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- BLOGS -->
+
+      <section class="blogs">
+
+        <div class="blog-heading">
+
+          <h1>Word Snacks:</h1>
+
+          <h2>Bite-sized Blogs to Tickle Your Brain</h2>
+
+        </div>
+
+        <div class="blog-card">
+
+          <h3>
+            How I Generated $11000+ Monthly Revenue Using Content Email Marketing & Sales
+          </h3>
+
+          <p>
+            Imagine this: one well-crafted email leading to a valuable client closure.
+
+As a Content Marketing Executive at Silicon India, I’ve learned that effective email marketing is more than outreach, it’s about building credibility, creating meaningful conversations, and driving business growth.
+
+Through personalized email campaigns, strategic follow-ups, and sales-focused magazine content, I’ve contributed to generating client engagement, strengthening relationships, and supporting revenue-driven outcomes.
+
+The biggest takeaway?
+People don’t connect with sales pitches, they connect with value, relevance, and trust.
+          </p>
+
+          <span>6 min read</span>
+
+          <h3>Transforming Words Into Business Growth</h3>
+
+          <p> I worked in B2B email marketing and content strategy, creating personalized outreach campaigns to connect with industry leaders and decision-makers. My role focused on crafting persuasive email content that converted prospects into clients by highlighting how our magazine features could enhance brand visibility, credibility, and lead generation.
+
+Beyond email marketing, I developed thought-leadership content and magazine articles featuring client companies, their industry contributions, emerging technologies, market trends, and sector-specific challenges. I researched pain points within different industries and created content that positioned our clients as trusted voices and solution providers in their field.
+
+My work combined copywriting, client communication, content marketing, and strategic storytelling to drive engagement, build business relationships, and support revenue growth.</p>
+
+        </div>
+
+      </section>
+
+      <!-- CONTACT -->
+
+      <section class="contact" id="contact">
+
+        <div class="section-title">
+          <h1>LET'S WORK</h1>
+          <h2>TOGETHER</h2>
+        </div>
+
+        <div class="contact-box">
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+              <i class="fa-solid fa-user"></i>
+              <div>
+                <strong>Thangapandian</strong>
+                Content Marketing Executive - Silicon India
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:thangapandian218@gmail.com">
+                  thangapandian218@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <div>
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/thangapandian-s-1393aa286?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+                  Visit LinkedIn Profile
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Mobile</strong>
+                +91 9159209014
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Location</strong>
+                Bangalore
+              </div>
+            </div>
+
+          </div>
+
+      
+
+        </div>
+
+      </section>
+
+      <!-- FOOTER -->
+
+      <div class="footer">
+
+        Made by <span>Thanga Pandian</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>
